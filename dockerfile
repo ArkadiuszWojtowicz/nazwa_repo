@@ -1,6 +1,5 @@
 FROM ubuntu 
-RUN apt-get upgrade
-RUN apt-get update -y
-RUN apt-get install apache2 -y 
+RUN apt-get update
+RUN apt-get install -y apache2 
 EXPOSE  80
-CMD ["apache2ctl", "-D", "FOREGROUND"]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
